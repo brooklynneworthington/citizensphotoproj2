@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 body {
-  background-color: #fff
+  background-color: black;
 }
 
 /** FONTS **/
@@ -49,6 +49,9 @@ h3 {
   background-position: center center;
 }
 
+.okay {
+  background-color: black;
+}
 
 /* ====================================
 Navigation 
@@ -423,4 +426,20 @@ Animation keyframes
 @keyframes filling {
   0%, 90% { fill: #FF4413; fill-opacity: 0; }
   100% { fill: #FF4413; fill-opacity: 1; }
+}
+
+.container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+margin: 0;
+}
+img{
+    margin: 5px;
+    transition: all 1s;
+}
+img:hover{
+    transform: scale(1.1)
 }
