@@ -2,16 +2,14 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Split Slick Slideshow</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100'><link rel="stylesheet" href="./about.css">
+  <title>Index</title>
+  <link rel="stylesheet" href="about.css">
+
 
 </head>
 <body>
 
-<!-- RESPONSIVE MENU  -->
+
 <div class="overlay-navigation">
   <nav role="navigation">
     <ul>
@@ -24,39 +22,74 @@
   </nav>
 </div>
 
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-<!-- partial:index.partial.html -->
-<div class="split-slideshow">
-  <div class="slideshow">
-    <div class="slider">
-      <div class="item">
-        <img src="images/aboutus.png" />
-      </div>
-      <div class="item">
-        <img src="images/photoman1.png" />
-      </div>
-      <div class="item">
-        <img src="images/photoman3.png" />
-      </div>
-      <div class="item">
-        <img src="images/photoman5.png" />
-      </div>
+<header class="masthead">
+  <img src="images/aboutphoto.png" alt="A man and a woman standing in the water of the Oslo fjord.">
+</header>
+
+<main id="content" class="main-area">
+  <section class="splash grid">
+    <div class="splash-content">
+      <div class="splash-text">
+        <p>Citizens Photo is a locally owned film lab in Portland and has been around since 1946, originally located in inner SE. We provide all of your film and digital processing and printing needs and can develop C41, E6 from 35mm to 8x10 and B&W film up to 11x14. We can also print up to 44" wide on various types of paper. We carry a wide variety of film, used film cameras and equipment, and occasionally take in gear on consignment.</p>
+      </div><!-- .splash-text -->
+    </div><!-- .splash-content -->
+  </section><!-- .splash -->
+
+  <section class="buckets grid">
+    <ul>
+      <li>
+        <img src="images/photoman3.png" alt="">
+        <div class="bucket">
+          <p>Got a question about your camera? Tripod? Weird lens? Call Jim here at Citizens Photo! Jim Skates is our used equipment extraordinaire, specializing in everything! He's been at Citizens for over 4 years and he owns more cameras than you can count, and spends his free time up on Mt. Hood skiing with friends, or walking around Portland photographing the streets.</p>
+        </div><!-- .bucket -->
+      </li>
+      <li>
+        <img src="images/photoman1.png" alt="">
+        <div class="bucket">
+          <p>Greg Potter is the owner and head honcho at Citizens Photo. You can find him at the front desk, answering phones or chatting with customers and spending time with his four children and 8 grandchildren.</p>
+        </div><!-- .bucket -->
+      </li>
+      <li>
+        <img src="images/photoman4.png" alt="">
+        <div class="bucket">
+          <p>Greg Foster has been with the company for 40+ years and knows everything there is to know about developing chemicals, processors, racks, reels and the like. If there's a problem, he's the one to call. Greg rides his bike to the lab 9 miles every morning and enjoys model trains and spending time with his granddaughters.</p>
+        </div><!-- .bucket -->
+      </li>
+    </ul>
+  </section><!-- .buckets -->
+
+  <section class="more grid">
+    <div class="more-content">
+      <h2 class="content-title">WANT TO STOP BY?</h2>
+    </div><!-- .more-content -->
+  </section><!-- .more -->
+
+  <section class="twins grid">
+    <div class="twin">
+      <h2 class="content-title">STORE HOURS</h2>
+      <p>Monday - Friday 9 am - 6pm /// Closed Saturday & Sunday</p>
     </div>
-  </div>
-  <div class="slideshow-text">
-    <div class="item">
-        ABOUT US
-      </div>
-    <div class="item">GREG POTTER</div>
-    <div class="item">JIM SKATES</div>
-    <div class="item">GREG FOSTER</div>
-  </div>
-</div>
+    <div class="twin">
+      <h2 class="content-title">PARKING + TRIMET</h2>
+      <p>Citizens Photo is located at the corner of Northeast Sandy Blvd and 31st street.  We do not have a designated parking lot. Parking spaces can be usually be found around the corner on 31st street or on NE Hassalo. PLEASE BE ADVISED there is NO PARKING directly in front of the store on Sandy Blvd. Two customers have lost diver's side mirrors while parked in front of the store.  There is one hour parking on Sandy Blvd. one half block west in front of Hollywood Liquors</p>
+    </div>
+  </section><!-- .twins -->
+</main>
 
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js'></script><script  src="./about.js"></script>
+  <div class="open-overlay">
+    <span class="bar-top"></span>
+    <span class="bar-middle"></span>
+    <span class="bar-bottom"></span>
+  </div>
+</section>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js'></script>
+<script  src="./index.js"></script>
 
 </body>
+
 </html>

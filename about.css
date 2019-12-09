@@ -1,3 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
+body {
+  background-color: black;
+}
+
+/** FONTS **/
+
+@font-face {
+  font-family: 'lackline';
+  src:  url('fonts/lackline.woff2') format('woff2'),
+        url('fonts/lackline.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'lackreg';
+  src:  url('fonts/lackreg.woff2') format('woff2'),
+        url('fonts/lackreg.woff') format('woff');
+}
+
+h1 { 
+  font-family: lackline;
+  color: black;
+  font-size: 8vw;
+  margin: 0;
+ }
+
+h2 {
+  font-family: lackreg;
+  color: white;
+  font-size: 4vw;
+  margin: 0;
+  z-index: -1;
+  text-align: center;
+}
+
+h3 {
+  font-family: lackreg;
+  color: white;
+  font-size: 8vw;
+}
+
+/** HOME **/
+
+.home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("images/homeimg.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.okay {
+  background-color: black;
+}
+
+/* ====================================
+Navigation 
+==================================== */
+
 .overlay-navigation {
   position: fixed;
   z-index: 99;
@@ -47,7 +107,7 @@ nav ul li {
 nav li a {
   position: relative;
   top: 46%;
-  color: #fff;
+  color: black;
   text-transform: uppercase;
   font-family: 'lackreg', sans-serif;
   font-weight: 300;
@@ -92,7 +152,7 @@ nav li a:after {
   right: 0;
   bottom: -50px;
   text-transform: none;
-  font-family: 'Open sans', sans-serif;
+  font-family: 'lackreg', sans-serif;
   font-weight: 300;
   font-style: italic;
   letter-spacing: 0;
@@ -296,7 +356,7 @@ Animation keyframes
 
 .home a {
   font-family: "Lackreg", sans-serif;
-  color: #FF4413;
+  color: white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
@@ -337,206 +397,422 @@ Animation keyframes
     width: 25px;
   }
 }
-/** blaj **/
 
-body,
-html {
-  height: 100%;
-  background: #110101;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
+/** TEXT ANIMATION **/
+
+
+.text-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s linear forwards, filling 5s ease-in forwards;
+  font-size: 80px;
+}
+
+.text-line text {
+  font-family: lackreg;
+  color: #FF4413;
+  font-size: 8vw;
+  margin: 0;
   z-index: -1;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.nav {
-    border-bottom: transparent;
-    text-align: center;
-    height: 70px;
-    line-height: 70px;
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-.menu {
-    margin: 0 30px 0 0;
+@keyframes filling {
+  0%, 90% { fill: #FF4413; fill-opacity: 0; }
+  100% { fill: #FF4413; fill-opacity: 1; }
 }
 
-.menu a {
-    clear: right;
-    text-decoration: none;
-    color: white;
-    margin: 100px 100px 100px 100px;
-    line-height: 70px;
-    z-index: 3;
+.container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+margin: 0;
+}
+img{
+    margin: 5px;
+    transition: all 1s;
+}
+img:hover{
+    transform: scale(1.1)
 }
 
-label {
-    margin: 0 40px 0 0;
-    font-size: 26px;
-    line-height: 70px;
-    display: none;
-    width: 26px;
-    float: right;
-    color: white;
-}
+/** CONTACT **/
 
-#toggle {
-    display: none;
-    z-index: 3;
-    color: solid red;
-}
-
-@media only screen and (max-width: 1100px) {
-    label {
-        display: block;
-        cursor: pointer;
-    }
-    .menu {
-        text-align: center;
-        width: 100%;
-        display: none;
-    }
-    .menu a {
-        display: block;
-        border-bottom: transparent;
-        margin: 0;
-     
-    }
-    #toggle:checked + .menu {
-        display: block;
-        z-index: 3;
-        color: solid red;
-    }}
-
-.slideshow {
-  position: fixed;
-  z-index: 1;
-  top: 20;
-  left: 0;
-  width: 100vw;
+#contact {
+  width: 100%;
   height: 100vh;
+  background-color: #111;
   overflow: hidden;
 }
-.slideshow .slider {
-  width: 100vw;
-  height: 100vw;
-  z-index: 2;
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  font: 300 60px 'lackline', sans-serif;
+  letter-spacing: 6px;
+  color: #FF4413;
+  margin-bottom: 25px;
 }
-.slideshow .slider * {
-  outline: none;
-}
-.slideshow .slider .item {
-  height: 100vh;
-  width: 100vw;
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 400px;
   position: relative;
-  overflow: hidden;
-  border: none;
 }
-.slideshow .slider .item .text {
-  display: none;
-}
-.slideshow .slider .item img {
-  min-width: 101%;
-  min-height: 101%;
+
+/* Begin Left Contact Page */
+.form-horizontal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 400px;
+  font-family: 'lackreg';
+  font-weight: 400;
 }
-.slideshow .slick-dots {
-  position: fixed;
-  z-index: 100;
-  width: 40px;
-  height: auto;
-  bottom: auto;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: auto;
+
+.form-control, textarea {
+  margin-top: 10px;
+  width: 400px;
+  background-color: #111;
   color: #fff;
-  display: block;
+  letter-spacing: 1px;
+
 }
-.slideshow .slick-dots li {
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 405px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
   display: block;
+  margin-top: 10px;
+  font: 300 14px 'lackreg', sans-serif;
+  letter-spacing: 2px;
+  color: #FF4413;
+}
+
+.button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  width: 400px;
+  margin-top: 5px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 14px 'lackreg', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+hr {
+  border-color: rgba(255,255,255,.8); ;
+}
+
+/** NAV **/
+
+
+
+/* NOTE:
+ * Grid/Flex layout stuff starts at line 187. 
+ * The stuff before is just boring old CSS to make content look not crappy.
+ */
+
+
+/*--------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust:     100%;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  border: 0;
   width: 100%;
   height: auto;
 }
 
-/**
-.slideshow .slick-dots li button {
-  position: relative;
-  width: 20px;
-  height: 15px;
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #FF4413;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
   text-align: center;
 }
-.slideshow .slick-dots li button:before {
-  content: "";
-  background: #fff;
-  color: #fff;
-  height: 2px;
-  width: 20px;
-  border-radius: 0;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: auto;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  transition: all 0.3s ease-in-out;
-  opacity: 0.6;
-}
-.slideshow .slick-dots li.slick-active button:before {
-  width: 40px;
-  opacity: 1;
-}
-
-**/
 
 
-.slideshow.slideshow-right {
-  left: 0;
-  z-index: 1;
-  width: 50vw;
-  pointer-events: none;
-}
-.slideshow.slideshow-right .slider {
-  left: 0;
-  position: absolute;
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: white;
+  font-family: 'lackreg';
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.slideshow-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 100;
-  font-size: 80px;
-  width: 100vw;
+h1,
+h2,
+h3 {
   text-align: center;
-  color: #fff;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 100;
-  pointer-events: none;
-  text-transform: uppercase;
-  letter-spacing: 20px;
-  line-height: 0.8;
+  margin: 0;
+  padding: 1em 0;
 }
-@media (max-width: 767px) {
-  .slideshow-text {
-    font-size: 40px;
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+
+
+
+/* Promo section */
+
+.logo,
+.site-title {
+  text-align: center;
+}
+
+.logo {
+  font-size: 8em;
+}
+
+.site-title {
+  margin-top: .1em;
+  margin-bottom: .1em;
+}
+
+/* Splash section */
+
+
+.splash-content {
+  padding: 1.5em;
+}
+
+@media screen and (min-width: 600px) {
+  .splash-text {
+    columns: 1;
+    margin-top: .1em;
+    margin-bottom: .1em;
+  }
+
+  .splash-text p {
+    padding-top: 0;
   }
 }
 
-.the-most {
-  position: fixed;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  width: 50vw;
-  max-width: 200px;
-  padding: 10px;
+/* Buckets section */
+
+.buckets {
+  padding: 2em 1em 1em;
+  background: #FF4413;
 }
-.the-most img {
-  max-width: 100%;
+
+.buckets ul {
+  margin: 0;
+  padding: 0;
 }
+
+.buckets li {
+  margin-bottom: 1em;
+  background: black;
+  list-style-type: none;
+}
+
+.bucket {
+  padding: 1.5em;
+}
+
+/* More section */
+
+.more {
+  padding: 2em;
+}
+
+/* Twins section */
+
+.twin {
+  padding: 2em;
+  background: #FF5E3E;
+  color: white;
+}
+
+.twin:last-of-type {
+  background: #FF958A;
+}
+
+/* Colophon section */
+.colophon {
+  padding: 2em;
+  background: hsl(0, 0%, 10%);
+  color: white;
+  text-align: center;
+}
+
+.colophon a {
+  color: white;
+}
+
+.colophon a:hover,
+.colophon a:focus {
+  border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------------------
+If no grid support, limit width to 50em and center align
+--------------------------------------------------------------*/
+@supports not (display: grid) {
+  .grid {
+    max-width: 50em;
+    margin: 0 auto;
+  }
+}
+
+/*--------------------------------------------------------------
+Use flex to create a three-bucket layout 
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+  @supports (display: flex) {
+
+    .buckets ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .buckets li {
+      width: 31%;
+    }
+
+  }
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+  /* Layout with CSS Grid */
+  @supports (display: grid) {
+
+    /* Four-column layout. Two center columns have a total max width of 50em: */
+    .grid {
+
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    /* Center items by placing them in the two center columns: */
+    .splash-content,
+    .more-content,
+    .buckets ul {
+      grid-column: 2/4;
+    }
+
+    /* Use automatic grid placement + span to let each item span two columns:*/
+    .twin,
+    .colophon aside {
+      grid-column: span 2;
+    }
+
+  }
+}
+
+
