@@ -1,1 +1,163 @@
+/** FONTS **/
+
+@font-face {
+  font-family: 'lackline';
+  src:  url('fonts/lackline.woff2') format('woff2'),
+        url('fonts/lackline.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'lackreg';
+  src:  url('fonts/lackreg.woff2') format('woff2'),
+        url('fonts/lackreg.woff') format('woff');
+}
+
+h1 { 
+  font-family: lackline;
+  color: #FF4413;
+  font-size: 8vw;
+  margin: 0;
+ }
+
+h2 {
+  font-family: lackreg;
+  color: #FF4413;
+  font-size: 8vw;
+  margin: 0;
+  z-index: -1;
+}
+
+h3 {
+  font-family: lackreg;
+  color: white;
+  font-size: 8vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+}
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  font: 300 60px 'lackline', sans-serif;
+  letter-spacing: 6px;
+  color: #FF4413;
+  margin-bottom: 25px;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Begin Left Contact Page */
+.form-horizontal {
+  position: absolute;
+  width: 400px;
+  font-family: 'lackreg';
+  font-weight: 400;
+}
+
+.form-control, textarea {
+  margin-top: 10px;
+  width: 400px;
+  background-color: #111;
+  color: #fff;
+  letter-spacing: 1px;
+
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 405px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 300 14px 'lackreg', sans-serif;
+  letter-spacing: 2px;
+  color: #FF4413;
+}
+
+.button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  width: 400px;
+  margin-top: 5px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'lackreg', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+hr {
+  border-color: rgba(255,255,255,.8); ;
+}
+
+/** NAV **/
 

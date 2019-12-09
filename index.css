@@ -151,7 +151,7 @@ nav li a:after {
   right: 0;
   bottom: -50px;
   text-transform: none;
-  font-family: 'Open sans', sans-serif;
+  font-family: 'lackreg', sans-serif;
   font-weight: 300;
   font-style: italic;
   letter-spacing: 0;
@@ -355,7 +355,7 @@ Animation keyframes
 
 .home a {
   font-family: "Lackreg", sans-serif;
-  color: #FF4413;
+  color: white;
   font-weight: 300;
   font-size: 12px;
   text-transform: uppercase;
