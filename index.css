@@ -364,6 +364,7 @@ Animation keyframes
   z-index: 10;
   top: 50px;
   left: 50px;
+  padding-top: 3em;
   padding-bottom: 3px;
   border-bottom: 1px solid #222;
 }
@@ -415,6 +416,11 @@ Animation keyframes
   z-index: -1;
   text-align: center;
   vertical-align: middle;
+}
+
+svg.text-line {
+  vertical-align: center;
+  padding-top: 40vh;
 }
 
 @keyframes dash {
@@ -813,5 +819,6 @@ CSS Grid layout for wider screens, when browser supports grid:
 
   }
 }
+
 
 
